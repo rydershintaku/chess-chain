@@ -3,18 +3,16 @@ const dotenv = require("dotenv");
 const appServer = require('./app');
 dotenv.config();
 
+// Replace with your actual MongoDB Atlas connection string
+const atlasDbUrl = 'mongodb+srv://playvigfake:XX3y53Mk4RyT3hbv@cluster0.srrvvmf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
-
-mongoose.connect(process.env.DATABASE_URL).then(con => {
-  // console.log(con.connection);
-  console.log("Connected to database succefully");
+mongoose.connect(atlasDbUrl).then(con => {
+  console.log("Connected to MongoDB Atlas database successfully");
 }).catch(err => {
-  console.log("Error while connecting to DB", err);
+  console.log("Error while connecting to MongoDB Atlas DB", err);
 })
-
 
 const port = process.env.PORT || 3001;
 const server = appServer.listen(port, () => {
   console.log("Listening on port ",port);
 });
-

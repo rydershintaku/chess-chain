@@ -3,7 +3,7 @@ import "@nomicfoundation/hardhat-toolbox";
 
 require('dotenv').config({ path: __dirname + '/.env' })
 
-const ftmscanKey = process.env.FTMSCAN_API_KEY || "";
+const ftmscanKey = process.env.FTMSCAN_API_KEY || "G3AKNA9DUYXNPIKS86YJVZV756ZVEVV4XZ";
 const testnetkey = process.env.FTM_TESTNET_WALLET_KEY || "";
 
 const mainnetkey = process.env.FTM_MAINNET_WALLET_KEY || "";
